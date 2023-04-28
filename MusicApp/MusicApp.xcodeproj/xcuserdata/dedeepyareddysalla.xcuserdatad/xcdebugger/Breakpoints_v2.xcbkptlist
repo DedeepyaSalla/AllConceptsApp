@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A3825D47-A5F6-4457-8CCD-49B010FE581C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B5505E9-504B-4822-AD27-E5F54AF9264C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicApp/PractiseFolder/Properties_NBasics.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "savePhotosInDisk_DefaultParams(photoLinks:deleteOld:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8B5505E9-504B-4822-AD27-E5F54AF9264C - c3909a8d9e5c066f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.NotesViewModel.savePhotosInDisk_InOut(photoLinks: Swift.Array&lt;Swift.String&gt;, maxLimit: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dedeepyareddysalla/Desktop/practisePRojects/MusicApp/MusicApp/PractiseFolder/Properties_NBasics.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "223"
+                  endingLineNumber = "223"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "8B5505E9-504B-4822-AD27-E5F54AF9264C - 37a219dd853dc46c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.NotesViewModel.savePhotosInDisk_DefaultParams(photoLinks: Swift.Array&lt;Swift.String&gt;, deleteOld: Swift.Bool) -&gt; ()"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dedeepyareddysalla/Desktop/practisePRojects/MusicApp/MusicApp/PractiseFolder/Properties_NBasics.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "223"
+                  endingLineNumber = "223"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "8B5505E9-504B-4822-AD27-E5F54AF9264C - 37a219dd853dc4d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.NotesViewModel.savePhotosInDisk_DefaultParams(photoLinks: Swift.Array&lt;Swift.String&gt;, deleteOld: Swift.Bool) -&gt; ()"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dedeepyareddysalla/Desktop/practisePRojects/MusicApp/MusicApp/PractiseFolder/Properties_NBasics.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D69F70A-CABA-4272-BD4D-36CB5B665E05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicApp/PractiseFolder/Properties_NBasics.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "savePhotosInDisk_Optionals(photoLinks:maxLimit:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6D69F70A-CABA-4272-BD4D-36CB5B665E05 - 6f6b2f0669440c10"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.NotesViewModel.modifyNotes() -&gt; ()"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dedeepyareddysalla/Desktop/practisePRojects/MusicApp/MusicApp/PractiseFolder/Properties_NBasics.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "6D69F70A-CABA-4272-BD4D-36CB5B665E05 - c6a855842603c2b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.NotesViewModel.savePhotosInDisk_Optionals(photoLinks: Swift.Array&lt;Swift.String&gt;, maxLimit: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dedeepyareddysalla/Desktop/practisePRojects/MusicApp/MusicApp/PractiseFolder/Properties_NBasics.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "227"
+                  endingLineNumber = "227"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "6D69F70A-CABA-4272-BD4D-36CB5B665E05 - c6a855842603c371"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MusicApp.NotesViewModel.savePhotosInDisk_Optionals(photoLinks: Swift.Array&lt;Swift.String&gt;, maxLimit: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MusicApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dedeepyareddysalla/Desktop/practisePRojects/MusicApp/MusicApp/PractiseFolder/Properties_NBasics.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "225"
+                  endingLineNumber = "225"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11F79D91-CF0F-4DF7-8A6F-36D077DC6E5C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicApp/NewTableVCViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "R_N_D_Properties()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
