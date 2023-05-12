@@ -11,9 +11,15 @@ class NewTableVCViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        TestCases_TDD()
         R_N_D_Properties()
         //findAllScenarios_forProtocols()
         print("")
+    }
+    
+    func TestCases_TDD() {
+        let greetings = Greetings()
+        greetings.greetMsg(firstName: nil, lastName: nil)
     }
     
     func all_TestCases() { //don't delete any function from here, whatever function you want to test -- just copy n paste in viewDidLoad
