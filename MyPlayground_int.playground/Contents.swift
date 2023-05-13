@@ -2,6 +2,92 @@ import UIKit
 
 var greeting = "Hello, playground"
 
+// MARK: Modifiers in Swift
+/*
+ Modifiers list -- Static, class,
+ */
+
+
+/*
+ why is swift called protocol - oriented programming
+ 1.Because we can not only confirm to protocols like otehr languages, but we can decalre default implementaion -- so that all classes, structs which confirm to this protocol automatically gets this functionality n they can directly use thsi function
+ 2.In addition, not only to ur own custom protcols but you can add default custom functions to existing native classes or structs or to all classes or structs which confirm to one protocol or more
+ 
+ 
+ https://www.hackingwithswift.com/quick-start/beginners/how-to-create-and-use-protocol-extensions
+ 
+ More importantly, by extending the protocol we’re adding functionality that would otherwise need to be done inside individual structs. This is really powerful, and leads to a technique Apple calls protocol-oriented programming – we can list some required methods in a protocol, then add default implementations of those inside a protocol extension. All conforming types then get to use those default implementations, or provide their own as needed.
+ 
+ */
+class Employer: protocol1, protocol2 {
+    static var employerClassCount = 0
+    
+//    var computedCount: Int {
+//        return employerClassCount
+//    }
+    
+    init() {
+        objectsCount = objectsCount + 1
+    }
+    
+    func count() -> Int {
+        return objectsCount
+    }
+    
+    static func count() -> Int {
+        return employerClassCount
+    }
+    
+    deinit {
+        objectsCount = objectsCount - 1
+    }
+    
+    func display() {
+        print("Employer - display")
+    }
+}
+
+var objectsCount = 0
+
+//err:static var objectsCount = 0
+//reason: you cannot declare global properties as static
+
+
+let employer1 = Employer()
+print(employer1.count())
+let employer2 = Employer()
+print(employer2.count())
+
+Employer.employerClassCount = 6
+print(Employer.count())
+
+protocol protocol1 {
+    func display()
+}
+
+extension protocol1 {
+    func display() {
+        print("protocol1 - display")
+    }
+}
+
+protocol protocol2 {
+    func display()
+}
+
+extension protocol2 {
+    func display() {
+        print("protocol2 - display")
+    }
+}
+employer1.display()
+
+
+
+internal enum testAccessLvels {
+    case one
+    case two
+}
 // MARK: Computed property
 
 class properties_Researches {
