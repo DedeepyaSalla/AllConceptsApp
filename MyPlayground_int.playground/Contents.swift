@@ -1,7 +1,76 @@
 import UIKit
 
 var greeting = "Hello, playground"
+// MARK: - enums, structs -- when to use each to declare static let
+/*
+ https://stackoverflow.com/questions/38585344/swift-constants-struct-or-enum
+ https://forums.swift.org/t/static-let-in-enum-vs-struct/36152/12
+ 
+ https://github.com/kodecocodes/swift-style-guide#extending-object-lifetime
+ 
+ 1.
+ One difference between the two is that structs can be instantiated where as enums cannot. So in most scenarios where you just need to use constants, it's probably best to use enums to avoid confusion.
 
+ For example:
+
+ struct Constants {
+     static let someValue = "someValue"
+ }
+
+ let _ = Constants()
+ The above code would still be valid.
+
+ If we use an enum:
+
+ enum Constants {
+     static let someValue = "someValue"
+ }
+
+ let _ = Constants() // error
+ 
+ Here's a short answer: Do your constants need to be unique? Then use an enum, which enforces this.
+
+ Want to use several different constants to contain the same value (often useful for clarity)? Then use a struct, which allows this.
+
+ 
+ 2.Constants
+ 
+ Constants are defined using the let keyword and variables with the var keyword. Always use let instead of var if the value of the variable will not change.
+
+ Tip: A good technique is to define everything using let and only change it to var if the compiler complains!
+
+ You can define constants on a type rather than on an instance of that type using type properties. To declare a type property as a constant simply use static let. Type properties declared in this way are generally preferred over global constants because they are easier to distinguish from instance properties. Example:
+
+ Preferred:
+
+ enum Math {
+   static let e = 2.718281828459045235360287
+   static let root2 = 1.41421356237309504880168872
+ }
+
+ let hypotenuse = side * Math.root2
+ Note: The advantage of using a case-less enumeration is that it can't accidentally be instantiated and works as a pure namespace.
+
+ Not Preferred:
+
+ let e = 2.718281828459045235360287  // pollutes global namespace
+ let root2 = 1.41421356237309504880168872
+
+ let hypotenuse = side * root2 // what is root2?
+ 
+ 3.
+ Static Methods and Variable Type Properties
+
+ Static methods and type properties work similarly to global functions and global variables and should be used sparingly. They are useful when functionality is scoped to a particular type or when Objective-C interoperability is required.
+ */
+
+
+// MARK: - Some helpful code styling tips
+/*
+ https://github.com/kodecocodes/swift-style-guide#extending-object-lifetime
+ Extending object lifetime ?? -- find out with
+ weak self, unowned self -- also try to create ur own dead locks and memory leaks with the strong reference cylce and check how the code gets fixed when used weak and when used unowned
+ */
 // MARK: Modifiers in Swift
 /*
  Modifiers list -- Static, class,
@@ -88,6 +157,34 @@ internal enum testAccessLvels {
     case one
     case two
 }
+enum staticEnums {
+    static let notesNib = "NotesNib"
+    static var ratingCell = "RatingCell"
+    
+  /*  //err: 'self.init' isn't called on all paths before returning from initializer
+    init() {
+        
+    } */
+}
+
+print(staticEnums.notesNib)
+print(staticEnums.ratingCell)
+
+staticEnums.ratingCell = "Rating 22"
+print(staticEnums.ratingCell)
+
+enum enumType {
+    case Friend
+    case Family
+    case Coworker
+    case Other
+
+    init() {
+        self = .Friend
+    }
+}
+
+print(enumType.self)
 // MARK: Computed property
 
 class properties_Researches {
