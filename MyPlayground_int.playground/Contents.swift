@@ -1,6 +1,63 @@
 import UIKit
 
 var greeting = "Hello, playground"
+// MARK: - Comparable, HAshable, Equatable
+/*
+ struct Person: Comparable {
+    //err:Type 'Person' does not conform to protocol 'Comparable'
+    var name: String
+}*/
+
+/*
+ //-- basic level 1 eg: Strings and numbers already confirm to Conparable protocol, that is why we are able to compare them with the compare operators like >, <, <=
+ 
+ Many types in the standard library already conform to the Comparable protocol
+ */
+let currentTemp = 73
+ 
+if currentTemp >= 90 {
+    print("It's a scorcher!")
+}
+
+struct Employee: Equatable {
+   let department: String
+   let name: String
+   let happinessIndex: Double
+   static func == (lhs: Employee, rhs: Employee) -> Bool {
+      return lhs.name == rhs.name &&
+             lhs.department == rhs.department
+   }
+}
+
+func isSamePerson(lhs: Employee, rhs: Employee) -> Bool {
+   return lhs.name == rhs.name && lhs.department == rhs.department
+}
+
+///employee we want to compare
+let johnFromIT = Employee(department: "IT", name: "John Doe", happinessIndex: 0.8)
+let johnFromHR = Employee(department: "HR", name: "John Doe", happinessIndex: 0.8)
+let alsoJohnFromIT = Employee(department: "IT", name: "John Doe", happinessIndex: 0.3)
+
+isSamePerson(lhs: johnFromIT, rhs: johnFromHR) //false
+print("came here")
+
+struct Person: Comparable {
+    static func < (lhs: Person, rhs: Person) -> Bool {
+        return lhs > rhs
+    }
+    
+   var name: String
+}
+
+let taylor = Person(name: "Taylor Swift")
+let justin = Person(name: "Justin Bieber")
+
+//if taylor > justin {
+//    print("lhs > rhs -- ie., as per sorting name in lhs is at highest point")
+//}
+
+print("if finished")
+
 // MARK: - enums, structs -- when to use each to declare static let
 /*
  https://stackoverflow.com/questions/38585344/swift-constants-struct-or-enum
@@ -81,11 +138,13 @@ var greeting = "Hello, playground"
  why is swift called protocol - oriented programming
  1.Because we can not only confirm to protocols like otehr languages, but we can decalre default implementaion -- so that all classes, structs which confirm to this protocol automatically gets this functionality n they can directly use thsi function
  2.In addition, not only to ur own custom protcols but you can add default custom functions to existing native classes or structs or to all classes or structs which confirm to one protocol or more
+ 3.For Structs, inheritance is not possible. But that limit is balanced with protocol inheritance n its default implementation
  
  
  https://www.hackingwithswift.com/quick-start/beginners/how-to-create-and-use-protocol-extensions
  
  More importantly, by extending the protocol we’re adding functionality that would otherwise need to be done inside individual structs. This is really powerful, and leads to a technique Apple calls protocol-oriented programming – we can list some required methods in a protocol, then add default implementations of those inside a protocol extension. All conforming types then get to use those default implementations, or provide their own as needed.
+ no need to even declare methods in signature, if only implementation is there n if there is no chance of overriding
  
  */
 class Employer: protocol1, protocol2 {
@@ -186,13 +245,23 @@ enum enumType {
 
 print(enumType.self)
 // MARK: Computed property
-
+/*
+ Use cases
+ 1.Computed properties can be used either when you have a property which needs has always dependency on other propertye
+ 2.When you want to declare object and add configuration to itself -> eg: UI Objects, URLComponets
+ */
 class properties_Researches {
     static var shared = properties_Researches()
     var num = 2
     var checkComputed_Intitiazation : Int {
         print("called computed")
         return num + 5
+    }
+    
+    private var urlComp: URLComponents {
+        var comp = URLComponents()
+        comp.scheme = "https"
+        return comp
     }
     
     var checkClosure_Intitiazation : Int = {

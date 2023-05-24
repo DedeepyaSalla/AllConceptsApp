@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LJn-vA-6c4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sqH-AL-DMY">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,10 +9,94 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="LZX-bN-4q0">
+            <objects>
+                <viewController id="cZj-JK-TS9" customClass="HomeViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q4Z-Kg-MC8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jBa-3e-Cb3">
+                                <rect key="frame" x="141.66666666666666" y="179" width="110" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucT-G8-KK0">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="66.666666666666671"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="DownloadPage"/>
+                                        <connections>
+                                            <action selector="DownloadPageClick:" destination="cZj-JK-TS9" eventType="touchUpInside" id="fQe-w7-6Oq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-y7-KE0">
+                                        <rect key="frame" x="5" y="66.666666666666657" width="99.666666666666671" height="66.666666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CollectionViewPage"/>
+                                        <connections>
+                                            <action selector="collectionVcClick:" destination="cZj-JK-TS9" eventType="touchUpInside" id="DaK-1j-ggn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrC-st-Tpe">
+                                        <rect key="frame" x="3" y="133.33333333333331" width="103.66666666666667" height="66.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SwiftBasicsPage"/>
+                                        <connections>
+                                            <action selector="SwiftBasicsPage:" destination="cZj-JK-TS9" eventType="touchUpInside" id="yRh-RR-SxO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="7Ry-pv-j4G"/>
+                                    <constraint firstAttribute="height" constant="200" id="Crf-tY-Hz6"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KQX-WM-uQa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jBa-3e-Cb3" firstAttribute="centerX" secondItem="KQX-WM-uQa" secondAttribute="centerX" id="kkq-fJ-9P9"/>
+                            <constraint firstItem="jBa-3e-Cb3" firstAttribute="top" secondItem="KQX-WM-uQa" secondAttribute="top" constant="76" id="nJN-90-iuM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BDd-n8-n4a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MTo-en-OJs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.25954198473278" y="-105.63380281690141"/>
+        </scene>
+        <!--Download AudiosVC-->
+        <scene sceneID="0mn-Cz-3g7">
+            <objects>
+                <viewController storyboardIdentifier="DownloadAudiosVC" id="Hgv-TS-2jB" customClass="DownloadAudiosVC" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mhu-Kq-Ego">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2km-Nr-XrQ">
+                                <rect key="frame" x="118" y="421" width="157" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Download Audios"/>
+                                <connections>
+                                    <action selector="DownloadAudioClick:" destination="Hgv-TS-2jB" eventType="touchUpInside" id="ch3-tp-Orz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ndV-63-urf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2km-Nr-XrQ" firstAttribute="centerX" secondItem="ndV-63-urf" secondAttribute="centerX" id="58U-Z5-Sib"/>
+                            <constraint firstItem="2km-Nr-XrQ" firstAttribute="centerY" secondItem="ndV-63-urf" secondAttribute="centerY" id="aZM-cP-MgF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0U0-Bg-dVo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1621" y="565"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1703" y="-106"/>
         </scene>
         <!--Countriea TableVC Table View Controller-->
         <scene sceneID="WHR-jG-VUQ">
@@ -85,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iuc-DZ-m2E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925.95419847328242" y="-95.070422535211279"/>
+            <point key="canvasLocation" x="3347" y="-49"/>
         </scene>
         <!--New TableVC View Controller-->
         <scene sceneID="8Tu-S0-rdC">
@@ -100,7 +184,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mP-Ro-bbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1741" y="-195"/>
+            <point key="canvasLocation" x="2666.4122137404579" y="-195.07042253521126"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I7d-fu-Hsv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sqH-AL-DMY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CQF-JF-HPf">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cZj-JK-TS9" kind="relationship" relationship="rootViewController" id="qBK-i0-UJR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUj-Uo-dUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40.458015267175568" y="-105.63380281690141"/>
         </scene>
     </scenes>
     <resources>

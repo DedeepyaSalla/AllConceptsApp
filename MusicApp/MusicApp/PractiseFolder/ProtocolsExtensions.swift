@@ -6,8 +6,99 @@
 //
 
 import Foundation
+import UIKit
 
+//MARK: - Enums use cases
 
+/*
+ Enum use cases
+ 
+ -- 1 avoid hardcoding through enums - advantage is avoids hardcoding, also does not allow developer to use names which aren't present in that group - gives compile error
+
+ -- in 2, it is painful to always add rawvalue, but still its okay atleast. But what if you want to declare api urls whose string is very long, there its impossibel to use case. So in that case use static let
+ Note: a. In enums, which does not have cases - init constructor is not possible, you cannot add string, Int to enum heading declaration
+ b.if it is property - then it must be static
+ Reason is simple, you can access instance properties like let, var only through instance and if enum does not support init constructor then instance cannot be created
+ If instance cannot be created, then only possible way to access it is thorugh static
+ */
+//
+
+enum UIElements_Eg {
+
+    enum ImageNames_Eg: String {
+        case appIcon
+        case profileImage
+    }
+}
+
+enum UINibTitlesEg: String {
+    case Main
+    case DownloadAudiosVC
+}
+
+enum AllGlobalVariables {
+    enum AllUrls {
+        static let devUrl = "https://dev.com"
+        static let prodURL = "https://prod.com"
+    }
+    
+    enum SystemColors {
+        static let devUrl = UIColor(red: 20, green: 30, blue: 40, alpha: 0)
+        static let prodURL = UIColor(red: 20, green: 30, blue: 40, alpha: 0)
+    }
+}
+
+//MARK: - Extensions
+//extension Color {
+////  static let brand = Color(red: 75/255, green: 0, blue: 130/255)
+////
+////  static var settingsBackground: Color {
+////    Color(UIColor { (trait) -> UIColor in
+////      return trait.userInterfaceStyle == .dark ? .systemGray5 : .systemGray6
+////    })
+////  }
+//}
+
+/*
+ to call extension
+ eg: let str = "test"
+ str.trimmed() --> allowed
+ String.trimmed() --> not allwoed
+ 
+ ie., you cannot use direct data type to call the extension function, you can only use its instance
+ */
+extension String {
+    func trimmed() -> String {
+        self.lowercased()
+        //self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    func trimmed_1(str: String) -> Int {
+        return 123//"test" + "\(self.lowercased())"
+        //self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+ extension String {
+    var nilIfEmpty: String? {
+        self.isEmpty ? nil : self
+    }
+}
+
+extension UIColor {
+  
+    static var mainColor : UIColor {
+        return UIColor(red: 20, green: 30, blue: 40, alpha: 0)
+    }
+    
+    
+    static var appGray : UIColor {
+        return UIColor(red: 20, green: 30, blue: 40, alpha: 0)
+    }
+  
+}
+
+//MARK: - Protocols
 protocol custom_Comparable {
     func check_Equal(lhs: String, rhs: String) -> Bool
     func check_LHS_isLess(lhs: Int, rhs: Int) -> Bool

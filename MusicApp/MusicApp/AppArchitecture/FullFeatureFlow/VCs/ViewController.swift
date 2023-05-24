@@ -10,8 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var imgView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      //   var test = check_without_Inti_calss
@@ -21,9 +21,28 @@ class ViewController: UIViewController {
     }
     
     func initialSetUp() {
+        uiSetUp()
+        getDataFromAllApis()
+    }
+    
+    func uiSetUp() {
         tableView.dataSource = self
         tableView.register(UINib(nibName: imageCell, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
        // tableView.register(ImageCell.self, forCellReuseIdentifier: reuseIdentifier)
+    }
+    
+    func getDataFromAllApis() {
+        let network = TestNetwork()
+        let urlStr = "https://api.unsplash.com/search/photos?query=puppies"
+        /*
+         network.getAPI_1(url: urlStr)
+         network.getAPI_2(url: urlStr) { data, err in
+             print("api call finished")
+         }
+         */
+        network.downloadAPI_1(url:urlStr) { data, err in
+            print("api call finished")
+        }
     }
 
 }

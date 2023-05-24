@@ -13,8 +13,13 @@
 		3F95BC9829FA01C900BABEFD /* MusicModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95BC9729FA01C900BABEFD /* MusicModels.swift */; };
 		3F95BCA229FA031A00BABEFD /* APIURLSessionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95BCA129FA031A00BABEFD /* APIURLSessionLayer.swift */; };
 		3F95BCA429FA065800BABEFD /* NetworkStatusNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95BCA329FA065800BABEFD /* NetworkStatusNotifier.swift */; };
+		3F9F19262A1E447C00BDF0EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F19252A1E447C00BDF0EF /* HomeViewController.swift */; };
+		3F9F19282A1E6A2700BDF0EF /* DownloadAudiosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F19272A1E6A2700BDF0EF /* DownloadAudiosVC.swift */; };
+		3F9F192A2A1E742100BDF0EF /* ProtocolPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F19292A1E742100BDF0EF /* ProtocolPower.swift */; };
+		3F9F192D2A1E990A00BDF0EF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F192C2A1E990A00BDF0EF /* Logger.swift */; };
 		3FBD36CC2A0E99010000C78B /* UnitTestSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBD36CB2A0E99010000C78B /* UnitTestSamples.swift */; };
 		3FBD36D42A0EA0D20000C78B /* MusicAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBD36D32A0EA0D20000C78B /* MusicAppTests.swift */; };
+		3FC01C212A1A4DB000213D43 /* TestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC01C202A1A4DB000213D43 /* TestNetwork.swift */; };
 		3FDA5BD329F8A07D0013C6AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA5BD229F8A07D0013C6AC /* AppDelegate.swift */; };
 		3FDA5BD529F8A07D0013C6AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA5BD429F8A07D0013C6AC /* SceneDelegate.swift */; };
 		3FDA5BD729F8A07D0013C6AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA5BD629F8A07D0013C6AC /* ViewController.swift */; };
@@ -46,9 +51,14 @@
 		3F95BC9729FA01C900BABEFD /* MusicModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModels.swift; sourceTree = "<group>"; };
 		3F95BCA129FA031A00BABEFD /* APIURLSessionLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURLSessionLayer.swift; sourceTree = "<group>"; };
 		3F95BCA329FA065800BABEFD /* NetworkStatusNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusNotifier.swift; sourceTree = "<group>"; };
+		3F9F19252A1E447C00BDF0EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3F9F19272A1E6A2700BDF0EF /* DownloadAudiosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAudiosVC.swift; sourceTree = "<group>"; };
+		3F9F19292A1E742100BDF0EF /* ProtocolPower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolPower.swift; sourceTree = "<group>"; };
+		3F9F192C2A1E990A00BDF0EF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3FBD36CB2A0E99010000C78B /* UnitTestSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestSamples.swift; sourceTree = "<group>"; };
 		3FBD36D12A0EA0D20000C78B /* MusicAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBD36D32A0EA0D20000C78B /* MusicAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAppTests.swift; sourceTree = "<group>"; };
+		3FC01C202A1A4DB000213D43 /* TestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetwork.swift; sourceTree = "<group>"; };
 		3FDA5BCF29F8A07C0013C6AC /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDA5BD229F8A07D0013C6AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FDA5BD429F8A07D0013C6AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +108,7 @@
 				3F95BC8E29F977AA00BABEFD /* Properties_NBasics.swift */,
 				3F95BC9029F9D0B700BABEFD /* ProtocolsExtensions.swift */,
 				3FBD36CB2A0E99010000C78B /* UnitTestSamples.swift */,
+				3F9F19292A1E742100BDF0EF /* ProtocolPower.swift */,
 			);
 			path = PractiseFolder;
 			sourceTree = "<group>";
@@ -134,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				3FDA5BD629F8A07D0013C6AC /* ViewController.swift */,
+				3F9F19272A1E6A2700BDF0EF /* DownloadAudiosVC.swift */,
+				3F9F19252A1E447C00BDF0EF /* HomeViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -149,6 +162,7 @@
 		3F95BC9B29FA021E00BABEFD /* AppArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				3F9F192B2A1E98F900BDF0EF /* DebugLayer */,
 				3F95BC9E29FA024700BABEFD /* Reusables */,
 				3F95BC9D29FA023500BABEFD /* DatabaseLayer */,
 				3F95BC9C29FA022B00BABEFD /* NetworkLayer */,
@@ -162,6 +176,7 @@
 			children = (
 				3F95BCA129FA031A00BABEFD /* APIURLSessionLayer.swift */,
 				3F95BCA329FA065800BABEFD /* NetworkStatusNotifier.swift */,
+				3FC01C202A1A4DB000213D43 /* TestNetwork.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -178,6 +193,14 @@
 			children = (
 			);
 			path = Reusables;
+			sourceTree = "<group>";
+		};
+		3F9F192B2A1E98F900BDF0EF /* DebugLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3F9F192C2A1E990A00BDF0EF /* Logger.swift */,
+			);
+			path = DebugLayer;
 			sourceTree = "<group>";
 		};
 		3FBD36D22A0EA0D20000C78B /* MusicAppTests */ = {
@@ -342,13 +365,18 @@
 				3FDA5BF329F8AA630013C6AC /* NewTableVCViewController.swift in Sources */,
 				3FDA5BF529F8B01D0013C6AC /* CountrieaTableVCTableViewController.swift in Sources */,
 				3FDA5BEC29F8A3C00013C6AC /* ImageCell.swift in Sources */,
+				3F9F19262A1E447C00BDF0EF /* HomeViewController.swift in Sources */,
 				3FBD36CC2A0E99010000C78B /* UnitTestSamples.swift in Sources */,
 				3F95BCA229FA031A00BABEFD /* APIURLSessionLayer.swift in Sources */,
+				3F9F192D2A1E990A00BDF0EF /* Logger.swift in Sources */,
 				3FDA5BD329F8A07D0013C6AC /* AppDelegate.swift in Sources */,
 				3FDA5BD529F8A07D0013C6AC /* SceneDelegate.swift in Sources */,
+				3FC01C212A1A4DB000213D43 /* TestNetwork.swift in Sources */,
 				3F95BC8F29F977AA00BABEFD /* Properties_NBasics.swift in Sources */,
 				3F95BC9829FA01C900BABEFD /* MusicModels.swift in Sources */,
+				3F9F192A2A1E742100BDF0EF /* ProtocolPower.swift in Sources */,
 				3F95BCA429FA065800BABEFD /* NetworkStatusNotifier.swift in Sources */,
+				3F9F19282A1E6A2700BDF0EF /* DownloadAudiosVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

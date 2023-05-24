@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum LoggerType {
+    case error
+    case warning
+    case info
+}
