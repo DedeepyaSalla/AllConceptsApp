@@ -11,10 +11,14 @@ class NewTableVCViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        TestCases_TDD()
-        R_N_D_Properties()
+        discoverBundleAPI()
         //findAllScenarios_forProtocols()
         print("")
+    }
+    
+    func discoverBundleAPI() {
+        let bundleObj = URLSnBundles()
+        bundleObj.getResource()
     }
     
     func TestCases_TDD() {

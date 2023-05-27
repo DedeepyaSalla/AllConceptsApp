@@ -23,8 +23,8 @@ class HomeViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func DownloadPageClick(_ sender: Any) {
-       // pushToNextVC()
-        pushToNextVC_0()
+        pushToNextVC()
+        //pushToNextVC_0()
     }
     @IBAction func collectionVcClick(_ sender: Any) {
     }

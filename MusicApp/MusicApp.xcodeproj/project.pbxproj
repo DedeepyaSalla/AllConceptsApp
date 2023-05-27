@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F75D7402A21768D00BB5A6F /* URLSnBundles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D73F2A21768D00BB5A6F /* URLSnBundles.swift */; };
 		3F8E82F02A0EDEF30063935D /* SliderStrorboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8E82EF2A0EDEF30063935D /* SliderStrorboard.storyboard */; };
 		3F95BC8F29F977AA00BABEFD /* Properties_NBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95BC8E29F977AA00BABEFD /* Properties_NBasics.swift */; };
 		3F95BC9129F9D0B700BABEFD /* ProtocolsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95BC9029F9D0B700BABEFD /* ProtocolsExtensions.swift */; };
@@ -32,6 +33,9 @@
 		3FDA5BF129F8A63A0013C6AC /* Flower.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3FDA5BF029F8A63A0013C6AC /* Flower.jpeg */; };
 		3FDA5BF329F8AA630013C6AC /* NewTableVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA5BF229F8AA630013C6AC /* NewTableVCViewController.swift */; };
 		3FDA5BF529F8B01D0013C6AC /* CountrieaTableVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA5BF429F8B01D0013C6AC /* CountrieaTableVCTableViewController.swift */; };
+		3FF152F92A223E280060C75B /* AllRestServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF152F82A223E280060C75B /* AllRestServices.swift */; };
+		3FF152FE2A22A7A40060C75B /* SongCelllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF152FC2A22A7A40060C75B /* SongCelllTableViewCell.swift */; };
+		3FF152FF2A22A7A40060C75B /* SongCelllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF152FD2A22A7A40060C75B /* SongCelllTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F75D73F2A21768D00BB5A6F /* URLSnBundles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSnBundles.swift; sourceTree = "<group>"; };
 		3F8E82EF2A0EDEF30063935D /* SliderStrorboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SliderStrorboard.storyboard; sourceTree = "<group>"; };
 		3F95BC8E29F977AA00BABEFD /* Properties_NBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties_NBasics.swift; sourceTree = "<group>"; };
 		3F95BC9029F9D0B700BABEFD /* ProtocolsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsExtensions.swift; sourceTree = "<group>"; };
@@ -73,6 +78,9 @@
 		3FDA5BF029F8A63A0013C6AC /* Flower.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Flower.jpeg; sourceTree = "<group>"; };
 		3FDA5BF229F8AA630013C6AC /* NewTableVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableVCViewController.swift; sourceTree = "<group>"; };
 		3FDA5BF429F8B01D0013C6AC /* CountrieaTableVCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrieaTableVCTableViewController.swift; sourceTree = "<group>"; };
+		3FF152F82A223E280060C75B /* AllRestServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRestServices.swift; sourceTree = "<group>"; };
+		3FF152FC2A22A7A40060C75B /* SongCelllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCelllTableViewCell.swift; sourceTree = "<group>"; };
+		3FF152FD2A22A7A40060C75B /* SongCelllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCelllTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 				3F95BC9029F9D0B700BABEFD /* ProtocolsExtensions.swift */,
 				3FBD36CB2A0E99010000C78B /* UnitTestSamples.swift */,
 				3F9F19292A1E742100BDF0EF /* ProtocolPower.swift */,
+				3F75D73F2A21768D00BB5A6F /* URLSnBundles.swift */,
 			);
 			path = PractiseFolder;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 		3F95BC9229FA016900BABEFD /* FullFeatureFlow */ = {
 			isa = PBXGroup;
 			children = (
+				3FF152F72A223E020060C75B /* Services */,
 				3F95BC9A29FA01F200BABEFD /* Models */,
 				3F95BC9929FA01E900BABEFD /* VCs */,
 				3F95BC9429FA019500BABEFD /* ViewModel */,
@@ -130,6 +140,8 @@
 				3FDA5BD829F8A07D0013C6AC /* Main.storyboard */,
 				3FDA5BEB29F8A3C00013C6AC /* ImageCell.xib */,
 				3FDA5BEA29F8A3C00013C6AC /* ImageCell.swift */,
+				3FF152FC2A22A7A40060C75B /* SongCelllTableViewCell.swift */,
+				3FF152FD2A22A7A40060C75B /* SongCelllTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +159,7 @@
 				3FDA5BD629F8A07D0013C6AC /* ViewController.swift */,
 				3F9F19272A1E6A2700BDF0EF /* DownloadAudiosVC.swift */,
 				3F9F19252A1E447C00BDF0EF /* HomeViewController.swift */,
+				3FDA5BEE29F8A6330013C6AC /* Dog.jpeg */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -217,6 +230,7 @@
 				3FDA5BD129F8A07C0013C6AC /* MusicApp */,
 				3FBD36D22A0EA0D20000C78B /* MusicAppTests */,
 				3FDA5BD029F8A07C0013C6AC /* Products */,
+				A8B8F5CB384551FDC961E3D6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,7 +250,6 @@
 				3F95BC8D29F975D900BABEFD /* PractiseFolder */,
 				3FDA5BD229F8A07D0013C6AC /* AppDelegate.swift */,
 				3FDA5BD429F8A07D0013C6AC /* SceneDelegate.swift */,
-				3FDA5BEE29F8A6330013C6AC /* Dog.jpeg */,
 				3FDA5BF029F8A63A0013C6AC /* Flower.jpeg */,
 				3FDA5BDB29F8A07E0013C6AC /* Assets.xcassets */,
 				3FDA5BDD29F8A07E0013C6AC /* LaunchScreen.storyboard */,
@@ -245,6 +258,21 @@
 				3FDA5BF429F8B01D0013C6AC /* CountrieaTableVCTableViewController.swift */,
 			);
 			path = MusicApp;
+			sourceTree = "<group>";
+		};
+		3FF152F72A223E020060C75B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3FF152F82A223E280060C75B /* AllRestServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A8B8F5CB384551FDC961E3D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FDA5BDF29F8A07E0013C6AC /* LaunchScreen.storyboard in Resources */,
+				3FF152FF2A22A7A40060C75B /* SongCelllTableViewCell.xib in Resources */,
 				3FDA5BEF29F8A6330013C6AC /* Dog.jpeg in Resources */,
 				3FDA5BF129F8A63A0013C6AC /* Flower.jpeg in Resources */,
 				3FDA5BED29F8A3C00013C6AC /* ImageCell.xib in Resources */,
@@ -360,9 +389,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F75D7402A21768D00BB5A6F /* URLSnBundles.swift in Sources */,
+				3FF152F92A223E280060C75B /* AllRestServices.swift in Sources */,
 				3FDA5BD729F8A07D0013C6AC /* ViewController.swift in Sources */,
 				3F95BC9129F9D0B700BABEFD /* ProtocolsExtensions.swift in Sources */,
 				3FDA5BF329F8AA630013C6AC /* NewTableVCViewController.swift in Sources */,
+				3FF152FE2A22A7A40060C75B /* SongCelllTableViewCell.swift in Sources */,
 				3FDA5BF529F8B01D0013C6AC /* CountrieaTableVCTableViewController.swift in Sources */,
 				3FDA5BEC29F8A3C00013C6AC /* ImageCell.swift in Sources */,
 				3F9F19262A1E447C00BDF0EF /* HomeViewController.swift in Sources */,

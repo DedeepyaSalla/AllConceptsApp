@@ -1,6 +1,129 @@
 import UIKit
 
 var greeting = "Hello, playground"
+
+// MARK: - decoder, encoder
+/*
+struct Toy: Codable {
+  var name: String
+}
+
+struct Employee: Codable {
+  var name: String
+  var id: Int
+  var favoriteToy: Toy
+}
+
+let toy = Toy(name: "Teddy Bear")
+let employee = Employee(name: "John Appleseed", id: 7, favoriteToy: toy)
+
+let encoder = JSONEncoder()
+let decoder = JSONDecoder()
+
+let data = try encoder.encode(employee)
+let string = String(data: data, encoding: .utf8)!
+let sameEmployee = try decoder.decode(Employee.self, from: data)
+*/
+
+
+//let toy = Toy(name: "Teddy Bear")
+
+
+//struct Toy: Codable {
+//  var name: String
+//}
+
+struct Employee: Codable {
+  var name: String
+  var id: Int
+  var favoriteToy: Int //Toy
+    
+    enum CodingKeys: String, CodingKey {
+      case name, id, favoriteToy //= "gift" // no use of declaring this when there is no change in key nameds
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        print(container)
+        try container.encode(name, forKey: .name)
+        try container.encode(id, forKey: .id)
+        try container.encode(favoriteToy, forKey: .favoriteToy)
+       // try container.encode(favoriteToy.name, forKey: .gift)
+       // try container.encode(favoriteToy.name, forKey: .toyName) // will give error - Type 'Employee.CodingKeys' has no member 'toyName'
+        //try container.encode(favoriteToy.name, forKey: .gift)
+    }
+}
+
+
+//print("\(error.localizedDescription)")
+
+struct Insect: Codable {
+    let insectId: Int
+    let name: String
+    let isHelpful: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case insectId = "insect_id"
+        case name
+        case details
+    }
+    
+    enum DetailsCodingKeys: String, CodingKey {
+        case isHelpful = "is_helpful"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        insectId = try container.decode(Int.self, forKey: .insectId)
+        name = try container.decode(String.self, forKey: .name)
+        let details = try container.nestedContainer(keyedBy: DetailsCodingKeys.self, forKey: .details)
+        isHelpful = try details.decode(Bool.self, forKey: .isHelpful)
+        
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(insectId, forKey: .insectId)
+        try container.encode(name.uppercased(), forKey: .name)
+        var details = container.nestedContainer(keyedBy: DetailsCodingKeys.self, forKey: .details)
+        try details.encode(isHelpful, forKey: .isHelpful)
+    }
+}
+
+
+//let = {"style":"ipa","name":"Endeavor","alcohol_by_volume":8.8999996185302734,"brewery_name":"Saint Arnold"}
+//let jsonData = try encoder.encode(Insect)
+//let decod = JSONDecoder()
+//if let insects = try? decod.decode([Insect].self, from: jsonData!) {
+//    print(insects)
+//}
+
+let employee = Employee(name: "John Appleseed", id: 7, favoriteToy: 9)
+
+let encoder = JSONEncoder()
+let decoder = JSONDecoder()
+
+//encoder.keyEncodingStrategy = .convertToSnakeCase
+//decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+let data = try encoder.encode(employee)
+let string = String(data: data, encoding: .utf8)!
+
+
+//struct EmployeeSnake: Codable {
+//  var name: String
+//  var id: Int
+//  //var favorite_toy: Toy
+//   // var gift: Toy
+//    var favoriteToy: Int
+//}
+
+
+let sameEmployee = try decoder.decode(Employee.self, from: data)
+
+
+
 // MARK: - Comparable, HAshable, Equatable
 /*
  struct Person: Comparable {
