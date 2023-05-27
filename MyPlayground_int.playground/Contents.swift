@@ -2,6 +2,52 @@ import UIKit
 
 var greeting = "Hello, playground"
 
+
+struct StackGeneric <T, Y> {
+    var items: [T] = []
+    var itemsY: [Y] = []
+
+    mutating func push(_ item: T) {
+        items.append(item)
+    }
+
+    mutating func pop() -> T {
+        return items.removeLast()
+    }
+}
+
+var intStack = StackGeneric(items: [1,2,3,4], itemsY: ["hkj"])
+
+print(intStack.items)
+
+//var strStack = StackGeneric<String, Any>(items: ["fasfa", "321", "ewio"])
+//
+//print(strStack.items)
+//
+//func printDicGeneric<T> (dic: T) where T == Dictionary<AnyObject, AnyObject> {
+//    print(dic)
+//}
+//
+//printDicGeneric(dic: ["key":"value"])
+//printDicGeneric(dic: ["key", "value"])
+//printDicGeneric(dic: ["key", 9])
+
+extension Array where Element == String {
+    func uppercaseAll() -> [Element] {
+        map { $0.uppercased() }
+    }
+}
+
+["Bernie", "Jaap", "Lady"].map { $0.uppercased() }//uppercaseAll() // Will be: ["BERNIE",
+
+["Bernie", "Jaap", "Lady"].uppercaseAll()
+
+enum Result<Success, Failure> {
+    case right(Success)
+    case wrong(Failure)
+}
+
+let result = Result.right()
 // MARK: - decoder, encoder
 /*
 struct Toy: Codable {
